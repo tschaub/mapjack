@@ -5,10 +5,9 @@
   "author": "Tim Schaub",
   "license": "BSD",
   "readmeFilename": "readme.md",
-  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:tschaub/mapjack.git"
+    "url": "git://github.com/tschaub/mapjack.git"
   },
   "keywords": [
     "map",
