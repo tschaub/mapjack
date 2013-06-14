@@ -99,7 +99,8 @@ module.exports = function(grunt) {
           'components/openlayers/lib/OpenLayers/Geometry/MultiLineString.js',
           'components/openlayers/lib/OpenLayers/Geometry/MultiPolygon.js',
           'components/openlayers/lib/OpenLayers/Format/GeoJSON.js',
-          'components/openlayers/lib/OpenLayers/Control/Zoom.js'
+          'components/openlayers/lib/OpenLayers/Control/Zoom.js',
+          'src/patches.js'
         ],
         dest: path.join(build, 'ol.js')
       }
@@ -174,6 +175,7 @@ module.exports = function(grunt) {
       '// @version ' + project.version,
       '// @description ' + project.description,
       '// @match https://github.com/*/*/edit/*/*.geojson',
+      '// @grant unsafeWindow',
       '// @copyright 2013+, ' + project.author,
       '// ==/UserScript==\n'
     ];
