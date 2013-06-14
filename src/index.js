@@ -77,7 +77,7 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
       }
     });
 
-    var map, vector, control;
+    var map, vector, control, dirty;
 
     function showMap() {
       var editor = $('#ace-editor').hide();
@@ -113,12 +113,18 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
 
       map.addControl(control);
       control.activate();
+      dirty = false;
+      vector.events.on({featuremodified: function() {
+        dirty = true;
+      }});
 
     }
 
     function updateEditor() {
-      var code = format.write(vector.features, true);
-      unsafeWindow.editor.setCode(code);
+      if (dirty) {
+        var code = format.write(vector.features, true);
+        unsafeWindow.editor.setCode(code);
+      }
     }
 
     function hideMap() {
