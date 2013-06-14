@@ -1,0 +1,47 @@
+.olCursorWait {
+  cursor: wait;
+}
+.olDragDown {
+  cursor: move;
+}
+.olDrawBox {
+  cursor: crosshair;
+}
+.olControlDragFeatureOver {
+  cursor: move;
+}
+.olControlDragFeatureActive.olControlDragFeatureOver.olDragDown {
+  cursor: -moz-grabbing;
+}
+
+.olControlZoom {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+.olControlZoom a {
+  display: block;
+  color: black;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  background: #fff;
+}
+.olControlZoom a:hover {
+  background: #f4f4f4
+}
+.olControlZoomIn {
+  border-radius: 4px 4px 0 0;
+  border-bottom: 1px solid #ccc;
+}
+.olControlZoomOut {
+  border-radius: 0 0 4px 4px;
+}
