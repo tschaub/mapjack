@@ -1,3 +1,6 @@
+.olCursorPointer {
+  cursor: pointer;
+}
 .olCursorWait {
   cursor: wait;
 }

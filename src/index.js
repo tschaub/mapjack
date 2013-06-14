@@ -115,6 +115,34 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
         dirty = true;
       }});
 
+      var over = 0;
+      map.events.on({
+        featureover: function(event) {
+          var feature = event.feature;
+          if (feature._sketch) {
+            viewport.addClass('olControlDragFeatureOver');
+          } else {
+            viewport.addClass('olCursorPointer');
+            ++over;
+          }
+        },
+        featureout: function(event) {
+          var feature = event.feature;
+          if (feature._sketch) {
+            viewport.removeClass('olControlDragFeatureOver');
+          } else {
+            over = over - 1 || 0;
+            if (!over) {
+              viewport.removeClass('olCursorPointer');
+            }
+          }
+        }
+      });
+
+      vector.events.on({vertexremoved: function() {
+        viewport.removeClass('olControlDragFeatureOver');
+      }});
+
     }
 
     function updateEditor() {

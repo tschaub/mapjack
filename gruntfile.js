@@ -60,6 +60,7 @@ module.exports = function(grunt) {
           'components/openlayers/lib/OpenLayers/Geometry/Polygon.js',
           'components/openlayers/lib/OpenLayers/Events.js',
           'components/openlayers/lib/OpenLayers/Events/buttonclick.js',
+          'components/openlayers/lib/OpenLayers/Events/featureclick.js',
           'components/openlayers/lib/OpenLayers/Projection.js',
           'components/openlayers/lib/OpenLayers/Map.js',
           'components/openlayers/lib/OpenLayers/Control.js',
