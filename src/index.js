@@ -99,8 +99,9 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
         layers: [raster, vector]
       });
 
-      var code = unsafeWindow.editor.ace.getSession().getValue();
-      var features = format.read(code);
+      var str = unsafeWindow.editor.ace.getSession().getValue();
+      var obj = JSON.parse(str);
+      var features = format.read(obj);
       vector.addFeatures(features);
       map.zoomToExtent(vector.getDataExtent());
 
