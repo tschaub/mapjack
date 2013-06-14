@@ -7,11 +7,11 @@ Mapjack hacks in a map editor next to GitHub's normal text editor when you are e
 
 ## Getting it
 
-Mapjack is distributed as a Greasemonkey-style user script.  It should work with either [Greasmonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) in Firefox or [Tampermonkey](https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo) in Chrome.  Note that it won't work as a straight [user script](http://www.chromium.org/developers/design-documents/user-scripts) in Chromium because it depends on `unsafeWindow` (be warned!).
+Mapjack is distributed as a Greasemonkey-style user script.  It has been tested to work with both [Greasmonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) in Firefox and [Tampermonkey](https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo) in Chrome.  Note that it won't work as a straight [user script](http://www.chromium.org/developers/design-documents/user-scripts) in Chromium because it depends on `unsafeWindow` (be warned!).
 
 The script is hosted here: [tschaub.net/mapjack/mapjack.user.js](http://tschaub.net/mapjack/mapjack.user.js)
 
-Installation instructions depend on the extension you're using.  Until you find more detail here, look to the extension docs for user script installation.
+If you already have either Greasemonkey or Tampermonkey installed, just click on the link above to install the script.  If you don't, go install them first, and then come back to click.
 
 ## Using it
 
