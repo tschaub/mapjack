@@ -29,19 +29,23 @@
   </head>
   <body><h1>mapjack</h1>
 
+<p><img alt="mapjack in action" src="action.gif"/></p>
+
 <h2>What it does</h2>
 
 <p>Mapjack hacks in a map editor next to GitHub&#39;s normal text editor when you are editing GeoJSON files.</p>
 
-<p><img alt="mapjack in action" src="action.gif"/></p>
-
 <h2>Getting it</h2>
 
-<p>Mapjack is distributed as a Greasemonkey-style user scripts.  It should work with either <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/">Greasmonkey</a> in Firefox or <a href="https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> in Chrome.  Note that it won&#39;t work as a straight <a href="http://www.chromium.org/developers/design-documents/user-scripts">user script</a> in Chromium because it depends on <code>unsafeWindow</code> (be warned!).</p>
+<p>Mapjack is distributed as a Greasemonkey-style user script.  It should work with either <a href="https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/">Greasmonkey</a> in Firefox or <a href="https://chrome.google.com/webstore/detail/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> in Chrome.  Note that it won&#39;t work as a straight <a href="http://www.chromium.org/developers/design-documents/user-scripts">user script</a> in Chromium because it depends on <code>unsafeWindow</code> (be warned!).</p>
 
 <p>The script is hosted here: <a href="http://tschaub.net/mapjack/mapjack.user.js">tschaub.net/mapjack/mapjack.user.js</a></p>
 
 <p>Installation instructions depend on the extension you&#39;re using.  Until you find more detail here, look to the extension docs for user script installation.</p>
 
-<p>After installing you can view any <code>.geojson</code> file on GitHub, click the &quot;Edit&quot; button, and get a map editor (hot tip: you can find some sample GeoJSON files to experiment with in the <a href="https://github.com/tschaub/mapjack/tree/master/data">mapjack repo</a>).</p></body>
+<h2>Using it</h2>
+
+<p>After installing you can view any <code>.geojson</code> file on GitHub, click the &quot;Edit&quot; button, and get a map editor (hot tip: you can find some sample GeoJSON files to experiment with in the <a href="https://github.com/tschaub/mapjack/tree/master/data">mapjack repo</a>).</p>
+
+<p>The editing workflow is pretty bare bones right now.  To modify an existing shape, just click and start dragging points around.  Click a &quot;ghost&quot; vertex to add a new point.  Click &quot;d&quot; while hovering over a vertext to delete.  No support for adding new features or removing entire features right now.  To finish editing, click back to the &quot;Code&quot; tab, enter your commit message, and commit!</p></body>
 </html>
