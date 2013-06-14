@@ -1,11 +1,11 @@
+(function(global) {
 
-
-/**
- * Hack GitHub's GeoJSON editor to provide a map option.
- */
-if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
-  // we're in
-  $(function() {
+  /**
+   * Hack GitHub's GeoJSON editor to provide a map option.
+   */
+  if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
+    // we're in
+    var $ = unsafeWindow.$;
 
     // CSS comes from concatenated file
     $('head').append('<style>' + CSS + '</style>');
@@ -165,6 +165,6 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
         $('div.js-file-commit-form').show();
       }
     }
+  }
 
-  });
-}
+}(this));
