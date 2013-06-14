@@ -33,6 +33,7 @@ module.exports = function(grunt) {
       },
       openlayers: {
         src: [
+          'src/header.js',
           'components/openlayers/lib/OpenLayers/SingleFile.js',
           'components/openlayers/lib/OpenLayers/BaseTypes/Class.js',
           'components/openlayers/lib/OpenLayers/BaseTypes.js',
