@@ -189,8 +189,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-gh-pages');
 
-  grunt.registerTask('build',
-      ['copy', 'jade', 'uglify', 'preamble', 'concat:css', 'concat:dist']);
+  grunt.registerTask('build', [
+    'copy', 'jade', 'uglify', 'preamble',
+    'cssmin', 'concat:css', 'concat:dist']);
 
   grunt.registerTask('deploy', ['build', 'gh-pages']);
 

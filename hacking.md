@@ -24,18 +24,4 @@ Set up a watch to continuously rebuild `mapjack.user.js`:
 
 The resulting `mapjack.user.js` file is built in `.grunt/mapjack/dist`.  The steps to load this as a user script depends on your browser extension.
 
-With Tampermonkey, you can drop this `mapjack.user.js` script directly in the editor.  Or if you browse to its location on your filesystem in your browser, you can click on it to update.  This is kind of tedious to do repeatedly.  It might be slightly easier to create a user script with the required preamble that has a `@require` for the location of this script.  This might look something like the following:
-
-```js
-// ==UserScript==
-// @name mapjack
-// @namespace http://tschaub.net/mapjack/
-// @version 0.0.2
-// @description Map based editing of GeoJSON files on GitHub.
-// @match https://github.com/*/*/edit/*/*.geojson
-// @copyright 2013+, Tim Schaub
-// @require file:///path/to/your/mapjack/.grunt/mapjack/dist/mapjack.user.js
-// ==/UserScript==
-```
-
-I think you will still run into caching issues with this approach though (because the version number isn't changing with changes to the underlying script).  So you'll likely have to re-save this script with each change to the `@require`d `mapjack.user.js` script.  Clunky, I know.
+While it is tedious, with Tampermonkey it looks to me like you have to manually force the script to upgrade.  One way to do this is to leave a browser tab open to the user script (e.g. http://localhost/projects/mapjack/.grunt/mapjack/dist/mapjack.user.js or however you browse your project files).  Then you make changes in your text editor, wait a second or two for the build to finish, reload the tab, and agree to update the user script.
