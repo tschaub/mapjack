@@ -102,7 +102,8 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
         layers: [raster, vector]
       });
 
-      var features = format.read($('#blob_contents').html());
+      var code = unsafeWindow.editor.ace.getSession().getValue();
+      var features = format.read(code);
       vector.addFeatures(features);
       map.zoomToExtent(vector.getDataExtent());
 
@@ -121,6 +122,7 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
     }
 
     function hideMap() {
+      control.deactivate();
       updateEditor();
       map.destroy();
       $('#ol-map').remove();
