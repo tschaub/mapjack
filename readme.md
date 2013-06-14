@@ -18,3 +18,5 @@ Installation instructions depend on the extension you're using.  Until you find 
 After installing you can view any `.geojson` file on GitHub, click the "Edit" button, and get a map editor (hot tip: you can find some sample GeoJSON files to experiment with in the [mapjack repo](https://github.com/tschaub/mapjack/tree/master/data)).
 
 The editing workflow is pretty bare bones right now.  To modify an existing shape, just click and start dragging points around.  Click a "ghost" vertex to add a new point.  Click "d" while hovering over a vertext to delete.  No support for adding new features or removing entire features right now.  To finish editing, click back to the "Code" tab, enter your commit message, and commit!
+
+**Disclaimer:** This is a late night hack.  Use at your own risk.
