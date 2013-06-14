@@ -126,6 +126,7 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
         control.deactivate();
         updateEditor();
         map.destroy();
+        map = null;
         $('#ol-map').remove();
         $('#ace-editor').show();
         $('ul.actions').show();
