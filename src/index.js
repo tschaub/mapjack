@@ -11,35 +11,32 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
     $('head').append('<style>' + CSS + '</style>');
 
     // some buttons
-    var anchor = $('<a>').attr('href', '#').addClass('map minibutton')
+    var mapAnchor = $('<a>').attr('href', '#').addClass('map minibutton')
         .append('Map');
+
     var others = $('ul.js-blob-edit-actions a');
+    var codeAnchor = $(others[0]);
+    var previewAnchor = $(others[1]).hide();
 
     // map button
-    anchor.click(function() {
-      others.removeClass('selected');
-      anchor.addClass('selected');
+    mapAnchor.click(function() {
       showMap();
+      mapAnchor.addClass('selected');
+      codeAnchor.removeClass('selected');
       return false;
+    });
+
+    codeAnchor.click(function() {
+      hideMap();
+      codeAnchor.addClass('selected');
+      mapAnchor.removeClass('selected');
     });
 
     // grab those editor action controls
     var actions = $('ul.actions');
 
-    // make the other buttons turn off the map
-    others.click(function() {
-      var me = $(this);
-      // this is silly, but it looks like gh is toggling all
-      window.setTimeout(function() {
-        anchor.removeClass('selected');
-        others.removeClass('selected');
-        me.addClass('selected');
-      }, 0);
-      hideMap();
-    });
-
     // add the map button into the mix
-    $('<li>').append(anchor)
+    $('<li>').append(mapAnchor)
         .insertBefore('ul.js-blob-edit-actions li:first');
 
     var format = new OpenLayers.Format.GeoJSON({

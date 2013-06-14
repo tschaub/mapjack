@@ -1,6 +1,6 @@
 {
   "name": "mapjack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Map based editing of GeoJSON files on GitHub.",
   "author": "Tim Schaub",
   "license": "BSD",
