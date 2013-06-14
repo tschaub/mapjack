@@ -122,13 +122,15 @@ if (window.location.pathname.match(/^(\/[^\/]+){2}\/edit\/.*\.geojson$/)) {
     }
 
     function hideMap() {
-      control.deactivate();
-      updateEditor();
-      map.destroy();
-      $('#ol-map').remove();
-      $('#ace-editor').show();
-      $('ul.actions').show();
-      $('div.js-file-commit-form').show();
+      if (map) {
+        control.deactivate();
+        updateEditor();
+        map.destroy();
+        $('#ol-map').remove();
+        $('#ace-editor').show();
+        $('ul.actions').show();
+        $('div.js-file-commit-form').show();
+      }
     }
 
   });
