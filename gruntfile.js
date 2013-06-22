@@ -79,7 +79,6 @@ module.exports = function(grunt) {
           'components/openlayers/lib/OpenLayers/Tile.js',
           'components/openlayers/lib/OpenLayers/Tile/Image.js',
           'components/openlayers/lib/OpenLayers/Layer/Grid.js',
-          'components/openlayers/lib/OpenLayers/TileManager.js',
           'components/openlayers/lib/OpenLayers/Handler/Drag.js',
           'components/openlayers/lib/OpenLayers/Control/DragPan.js',
           'components/openlayers/lib/OpenLayers/Control/PinchZoom.js',
