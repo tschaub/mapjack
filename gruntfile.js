@@ -98,8 +98,7 @@ module.exports = function(grunt) {
           'components/openlayers/lib/OpenLayers/Geometry/MultiLineString.js',
           'components/openlayers/lib/OpenLayers/Geometry/MultiPolygon.js',
           'components/openlayers/lib/OpenLayers/Format/GeoJSON.js',
-          'components/openlayers/lib/OpenLayers/Control/Zoom.js',
-          'src/patches.js'
+          'components/openlayers/lib/OpenLayers/Control/Zoom.js'
         ],
         dest: path.join(build, 'ol.js')
       }
