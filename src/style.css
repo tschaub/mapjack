@@ -1,3 +1,8 @@
+/**
+ * NOTE: because of the way this stylesheet is included, it must only contain
+ * double quotes (no single quotes).
+ */
+
 #ol-map {
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N89+7dfwYiACNIoZCQECMhtaMK8YYQ0cEDAIUFJ9QI76xWAAAAAElFTkSuQmCC");
 }
@@ -33,7 +38,7 @@
   color: black;
   padding: 0;
   font-size: 18px;
-  font-family: "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
