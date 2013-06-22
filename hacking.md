@@ -24,4 +24,16 @@ Set up a watch to continuously rebuild `mapjack.user.js`:
 
 The resulting `mapjack.user.js` file is built in `.grunt/mapjack/dist`.  The steps to load this as a user script depends on your browser extension.
 
-While it is tedious, with Tampermonkey it looks to me like you have to manually force the script to upgrade.  One way to do this is to leave a browser tab open to the user script (e.g. http://localhost/projects/mapjack/.grunt/mapjack/dist/mapjack.user.js or however you browse your project files).  Then you make changes in your text editor, wait a second or two for the build to finish, reload the tab, and agree to update the user script.
+With Tampermonkey you can `@require` the user script on your filesystem during development.  For example, if the path to the build script is `/path/to/mapjack/.grunt/mapjack/dist/mapjack.user.js` then you could create a new script in Tampermonkey that looks like this:
+
+    // ==UserScript==
+    // @name mapjack
+    // @namespace http://tschaub.net/mapjack/
+    // @version 0.0.5
+    // @description Map based editing of GeoJSON files on GitHub.
+    // @match https://github.com/*/*/edit/*/*.geojson
+    // @grant unsafeWindow
+    // @require file:///path/to/mapjack/.grunt/mapjack/dist/mapjack.user.js
+    // ==/UserScript==
+
+With the latest Tampermonkey, scripts that use the `file://` scheme are not cached, so you should be able to reload after making edits and pull in your edits.
