@@ -14,9 +14,10 @@
     var mapAnchor = $('<a>').attr('href', '#').addClass('map minibutton')
         .append('Map');
 
-    var others = $('ul.js-blob-edit-actions a');
-    var codeAnchor = $(others[0]);
-    var previewAnchor = $(others[1]).hide();
+    var codeAnchor = $('ul.js-blob-edit-actions a').first();
+
+    // remove the preview item for now
+    $('ul.js-blob-edit-actions li:last').remove();
 
     // map button
     mapAnchor.click(function() {
@@ -26,11 +27,7 @@
       return false;
     });
 
-    codeAnchor.click(function() {
-      hideMap();
-      codeAnchor.addClass('selected');
-      mapAnchor.removeClass('selected');
-    });
+    codeAnchor.click(hideMap);
 
     // grab those editor action controls
     var actions = $('ul.actions');
@@ -77,6 +74,9 @@
     var map, vector, control, dirty;
 
     function showMap() {
+      if (map) {
+        return;
+      }
       var editor = $('#ace-editor').hide();
 
       // hide the additional editor actions
