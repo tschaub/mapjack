@@ -47,10 +47,10 @@
     var styles = new OpenLayers.StyleMap({
       'default': {
         pointRadius: 6,
-        fillColor: 'white',
-        fillOpacity: 0.1,
-        strokeWidth: 2,
-        strokeOpacity: 0.7,
+        fillColor: '#006ec8',
+        fillOpacity: 0.2,
+        strokeWidth: 1.5,
+        strokeOpacity: 0.5,
         strokeColor: '#006ec8'
       },
       select: {
@@ -64,8 +64,8 @@
       temporary: {
         pointRadius: 4,
         fillColor: 'white',
-        fillOpacity: 0.1,
-        strokeWidth: 2,
+        fillOpacity: 0.7,
+        strokeWidth: 1.5,
         strokeOpacity: 0.7,
         strokeColor: '#006ec8'
       }

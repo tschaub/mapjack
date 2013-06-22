@@ -1,3 +1,7 @@
+#ol-map {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N89+7dfwYiACNIoZCQECMhtaMK8YYQ0cEDAIUFJ9QI76xWAAAAAElFTkSuQmCC");
+}
+
 .olCursorPointer {
   cursor: pointer;
 }
