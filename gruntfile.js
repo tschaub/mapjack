@@ -177,10 +177,7 @@ module.exports = function(grunt) {
       '// @copyright 2013+, ' + project.author,
       '// ==/UserScript==\n'
     ];
-    fs.writeFile(path.join(build, 'preamble.js'), parts.join('\n'),
-        function(err) {
-          done(err);
-        });
+    fs.writeFile(path.join(build, 'preamble.js'), parts.join('\n'), done);
   });
 
   grunt.loadNpmTasks('grunt-contrib-copy');
