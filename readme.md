@@ -1,4 +1,6 @@
 # mapjack
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/tschaub/mapjack.svg)](https://greenkeeper.io/)
 ![mapjack in action](action.gif)
 
 ## What it does
